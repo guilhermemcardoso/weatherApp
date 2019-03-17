@@ -13,6 +13,7 @@ export function getWeatherInfoById(id) {
     return instance.get(BASE_URL, {
         params: {
             APPID: API_KEY,
+            units: 'metric',
             id: id
         }
     });

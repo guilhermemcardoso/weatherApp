@@ -33,7 +33,7 @@ export class WeatherInfo extends Component {
                 </View>
 
                 <View style={style.currentInfoContainer}>
-                        <Text style={style.currentWeather}>{this.props.temperature}° C</Text>
+                        <Text style={style.currentWeather}>{Math.floor(this.props.temperature)}° C</Text>
                         <Image
                             style={style.icon}
                             source={require('../../../res/assets/weatherIcons/' + '10d' + '.png')}
@@ -41,8 +41,8 @@ export class WeatherInfo extends Component {
                 </View>
 
                 <View style={style.minMaxContainer}>
-                    <Text style={style.minMax}>Máx: {this.props.maxTemp}° C</Text>
-                    <Text style={style.minMax}>Min: {this.props.minTemp}° C</Text>
+                    <Text style={style.minMax}>Máx: {Math.floor(this.props.maxTemp)}° C</Text>
+                    <Text style={style.minMax}>Min: {Math.floor(this.props.minTemp)}° C</Text>
                 </View>
 
                 <View style={style.bottomContainer}>
