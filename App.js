@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import {Splash} from './src/components/screens/Splash/Splash';
+import {Home} from './src/components/screens/Home/Home';
 
 export default class App extends Component {
+
   render() {
     return (
-      <Splash />
+      <Home />
     );
   }
 }
