@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import {View, Button, Text, StatusBar, Alert} from 'react-native';
 import style from './HomeStyle';
 import {WeatherInfo} from '../../general/WeatherInfo/WeatherInfo';
-import {getWeatherInfoById} from "../../../service/weatherService";
+import {getWeatherInfoById} from '../../../service/weatherService';
 
-export class Home extends Component {
+export default class Home extends Component {
 
     state = {
         showProgress: false,
@@ -35,7 +35,7 @@ export class Home extends Component {
             minTemp: data.main.temp_min,
             maxTemp: data.main.temp_max,
             humidity: data.main.humidity,
-            icon: data.weather.icon
+            icon: data.weather[0].icon
         });
     };
 
@@ -65,6 +65,7 @@ export class Home extends Component {
 
     onPressMinMaxButton = () => {
         console.log("CLICOU");
+        this.props.navigation.navigate('Details');
     };
 
     render() {
